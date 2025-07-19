@@ -23,17 +23,19 @@
         }
         </style>
         <title>Miraflores Camaras Vigilancia</title>
+          <script>
+    var password = "mateo2018";
+    var intento = prompt("Introduce la contraseña:");
+    if (intento !== password) {
+      // Borra todo el body y muestra solo el mensaje
+      document.write("<h1>Acceso denegado</h1>");
+      // Detiene la ejecución de más scripts
+      window.stop();
+    }
+  </script>
     </head>
     <body>
-          <script>
-          var password = "mateo2018";
-          var intento = prompt("Introduce la contraseña:");
-          if (intento !== password) {
-            document.body.innerHTML = "<h1>Acceso denegado</h1>";
-            // Evitar que el resto del contenido se ejecute
-            throw new Error("Acceso denegado por contraseña incorrecta");
-          }
-        </script>
+        
 		   <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
